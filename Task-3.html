@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        body{
+            background-color: chocolate;
+        }
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .reg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            color:azure;
+            font-size: 20px;
+            background-color: cadetblue;
+            padding:30px;
+            }
+        .reg .submit{
+            width: 100%;
+            padding:8px 0;
+            border-radius: 6px;
 
-<style>
-    .form{
-    text-align: center;
-    padding-left: 50px;
-    margin: 100px;
-    font-family: 'Times New Roman', Times, serif;
-    }
-   .Block{
-    font-style: italic;
-    text-align: center;
-    font-size: large;
 
-   }
-  body{
-    background-color: rgba(255, 0, 255, 0.712);
-  }
- 
-
-</style>
-
+        }
+    </style>
 <head>
-
-   <title>HTML FORM</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-
-    <h1 class="form">HTML FORM</h1>
-    <form class="Block">
-     <table>
-    
-    <label for="FName" > First Name:- </label>   
-    <input type="text" required><br><br><br>
-    
-    
-    <label for="SName" >Second Name:- </label>
-    <input type="text" required><br><br><br>
-    
-
-    <label for="DOB" >Date of birth:- </label>
-    <input type="date" required><br><br><br>
-
-
-    <label for="Mail" >Email id:- </label>
-    <input type="email" required><br><br><br>
-
-
-    <label for="Contact" >Contact Number:- </label>
-    <input type="number" required><br><br><br>
-
-
-    <label >Message:- </label>
-    <textarea name="Message" ></textarea><br><br><br>
-
-    <button type="submit">Submit</button>
-
-    </table>
-     </form>
-
+    <div class="container">
+    <h1><u>HTML FORM</u></h1>
+    <form name="registration" class="reg">
+        <table>
+            <tr>
+                <td><label for="fname">First name:</label></td>
+                <td><input type="text" name="fname" id="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last name:</label></td>
+                <td><input type="text" name="lname" id="lname"></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Date of Birth:</label></td>
+                <td><input type="date" id="DOB"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email id:</label></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="num">Contact Number:</label></td>
+                <td><input type="number" id="num"></td>
+            </tr>
+            <tr>
+                <td><label>Feedback:</label></td>
+                <td><textarea name="about" id="about"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" class="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
 </body>
 </html>
